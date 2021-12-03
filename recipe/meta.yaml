@@ -1,4 +1,4 @@
-{% set version = '1.0.1' %}
+{% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coro_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coro/coro_{{ version }}.tar.gz
-  sha256: 6e58920e09027694ef377bda1d18cb5b472bd1de62327db59e3417c7da68f164
+  sha256: 9b1557a48f2a645cfb1d15f576edc53b3dac5a2863024f4673efc69644a33992
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -39,14 +39,11 @@ test:
 about:
   home: https://github.com/r-lib/coro
   license: MIT
-  summary: Provides 'coroutines' for R, a family of functions that can be suspended and resumed
-    later on. This includes 'async' functions (which await) and generators (which yield).
-    'Async' functions are based on the concurrency framework of the 'promises' package.
-    Generators are based on a dependency free iteration protocol defined in 'coro' and
-    are compatible with iterators from the 'reticulate' package.
+  summary: Provides 'coroutines' for R, a family of functions that can be suspended and resumed later on. This includes 'async' functions (which await) and generators (which yield). 'Async' functions are based on the concurrency framework of the 'promises' package. Generators are based on a dependency free iteration protocol
+    defined in 'coro' and are compatible with iterators from the 'reticulate' package.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
