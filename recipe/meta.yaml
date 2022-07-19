@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coro_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coro/coro_{{ version }}.tar.gz
-  sha256: 9b1557a48f2a645cfb1d15f576edc53b3dac5a2863024f4673efc69644a33992
+  sha256: 4e7729b1b1461be7805b2fcad0ed4c04755390dad3f1a2cb9f3af701db6d7d73
 
 build:
   merge_build_host: true  # [win]
